@@ -10,7 +10,7 @@ class one{
     public:
         void menu1();
 };
-
+//---------------------------------- menu card------------------------------------------------
 void one::menu1(){
     cout<<"\n\n\n\t\t\t\t\t =============== WELCOME TO FOOD ORDERING APP ================"<<endl;
     cout<<"\n\n\n\t\t\t\t\t   =================== START YOUR ORDER ==================="<<endl;
@@ -21,9 +21,10 @@ void one::menu1(){
 
 class two: public one{
     protected:
-        int pizza,ch,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s=0;
+        int pizza,ch,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,s=0;
         string y,ye;
     public:
+    //-------------------------------------- accepting order ----------------------------------
         void menu2(){
             ofstream write;
             write.open("order.text");
@@ -58,8 +59,8 @@ class two: public one{
                                 case 2:
                                     cout<<"\n\n\tHOW MANY PIZZA DO YOU WANT: ";
                                     cin>>pizza;
-                                    a=440;
-                                    s=s+a*pizza;
+                                    b=440;
+                                    s=s+b*pizza;
                                     write<<"YOUR ORDER Exotica: 440";
                                     write<<"\n";
                                     write<<"NUMBER OF PIZZA IS: "<<pizza;
@@ -69,8 +70,8 @@ class two: public one{
                                 case 3:
                                     cout<<"\n\n\tHOW MANY CHICKEN SIZZLER DO YOU WANT: ";
                                     cin>>pizza;
-                                    a=580;
-                                    s=s+a*pizza;
+                                    c=580;
+                                    s=s+c*pizza;
                                     write<<"YOUR ORDER CHICKEN SIZZLER: 580";
                                     write<<"\n";
                                     write<<"NUMBER OF CHICKEN SIZZLER IS: "<<pizza;
@@ -80,8 +81,8 @@ class two: public one{
                                 case 4:
                                     cout<<"\n\n\tHOW MANY CRISPY CHICKEN DO YOU WANT: ";
                                     cin>>pizza;
-                                    a=520;
-                                    s=s+a*pizza;
+                                    d=520;
+                                    s=s+d*pizza;
                                     write<<"YOUR ORDER CRISPY CHICKEN: 520";
                                     write<<"\n";
                                     write<<"NUMBER OF CRISPY CHICKEN IS: "<<pizza;
@@ -91,8 +92,8 @@ class two: public one{
                                 case 5:
                                     cout<<"\n\n\tHOW MANY SPAGHETTI DO YOU WANT: ";
                                     cin>>pizza;
-                                    a=350;
-                                    s=s+a*pizza;
+                                    e=350;
+                                    s=s+e*pizza;
                                     write<<"YOUR ORDER SPAGHETTI: 350";
                                     write<<"\n";
                                     write<<"NUMBER OF SPAGHETTI IS: "<<pizza;
@@ -117,7 +118,7 @@ class two: public one{
                                     cin>>pizza;
 
                                     g=420;
-                                    s=s+b*pizza;
+                                    s=s+g*pizza;
                                     write<<"YOUR ORDER Tetrazzini: 420";
                                     write<<" \n";
                                     write<<"NUMBER OF Tetrazzini IS: "<<pizza;
@@ -241,7 +242,7 @@ class two: public one{
                             cout<<"\n\tDO YOU WANT ANOTHER ORDER (y/n): ";
                             cin>>y;
                             if(y=="y"||y=="Y"){
-                                goto a;
+                                goto a;                         //restart order system
                             }
                             else{
                                 cout<<"\n\t\t\t\t\tTHANK YOU FOR YOUR ORDER :) GENERATING BILL";
@@ -253,22 +254,23 @@ class two: public one{
                             cout<<"\n\t\t\t\t\t\t";
                             system("PAUSE");
                         }
-    system("cls");
-    cout<<"\n\t\t\t\t\t\t ========================================================="<<endl;
-    cout<<"\n\t\t\t\t\t\t                   FOOD ORDERING SYSTEM                   "<<endl;
-    cout<<"\n\t\t\t\t\t\t ========================================================="<<endl;
+            //----------------------------- billing system --------------------------------
+            system("cls");
+            cout<<"\n\t\t\t\t\t\t ========================================================="<<endl;
+            cout<<"\n\t\t\t\t\t\t                   FOOD ORDERING SYSTEM                   "<<endl;
+            cout<<"\n\t\t\t\t\t\t ========================================================="<<endl;
 
-    cout<<endl;
-    cout<<endl;
-    cout<<"\t\t\t\t\t\t Cashier: Aman Varchaswi"<<endl;
-    cout<<endl;
-    cout<<"\n\t\t\t\t\t\t YOUR TOTAL BILL IS Rs."<<s<<endl;
-    cout<<"\n\t\t\t\t\t\t HAPPY EATING!"<<endl;
-    write<<"\t\t\t\t\t\t\t";
-    write<<"\t\t\t\t\t\t\tTOTAL BILL IS Rs."<<s;
-    cout<<"\n\t\t\t\t\t\t=================================================="<<endl;
-    write.close();
-    }
+            cout<<endl;
+            cout<<endl;
+            cout<<"\t\t\t\t\t\t Cashier: Aman Varchaswi"<<endl;
+            cout<<endl;
+            cout<<"\n\t\t\t\t\t\t YOUR TOTAL BILL IS Rs."<<s<<endl;
+            cout<<"\n\t\t\t\t\t\t HAPPY EATING!"<<endl;
+            write<<"\t\t\t\t\t\t\t";
+            write<<"\t\t\t\t\t\t\tTOTAL BILL IS Rs."<<s;
+            cout<<"\n\t\t\t\t\t\t========================================================="<<endl;
+            write.close();
+        }
     void show1(){
         menu1();
         menu2();
@@ -279,6 +281,7 @@ class three: public one,public two{
     public:
     void total(){
         long userId;
+        //----------------login portal------------------------
         d:
             cout<<"\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t---------------------";
 			cout<<"\n\t\t\t\t\t\t\tEnter Login Id = ";
